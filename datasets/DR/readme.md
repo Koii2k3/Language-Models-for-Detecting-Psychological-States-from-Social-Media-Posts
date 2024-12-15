@@ -1,1 +1,0 @@
-Raw dataset: https://github.com/Inusette/Identifying-depression/tree/master/Data_Collector
