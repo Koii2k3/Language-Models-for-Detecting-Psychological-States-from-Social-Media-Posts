@@ -16,7 +16,7 @@ df = pd.read_csv(data_path)
 clean_df = df[['sentence', 'is_stressor', 'original_label']]
 
 clean_df['post'] = clean_df['sentence']
-clean_df['is_stress'] =  clean_df['is_stressor']
+clean_df['is_stress'] =  clean_df['is_stressor'].map({0: 'No', 1: 'Yes'})
 clean_df['stress_kind'] = df['original_label']
 
 final_df = clean_df[['post', 'is_stress', 'stress_kind']]

@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 name = 'Dreaddit'
-kind = 'train'  # val
+kind = 'val'  # val
 
 data_path = r'datasets\raw\{}\raw_{}.csv'.format(name, kind)
 parent_output_path = r'datasets\clean\{}'.format(name)
@@ -16,7 +16,7 @@ df = pd.read_csv(data_path)
 clean_df = df[['text', 'label']]
 
 clean_df['post'] = clean_df['text']
-clean_df['is_depression'] = df['label']
+clean_df['is_depression'] = df['label'].map({0: 'No', 1: 'Yes'})
 
 final_df = clean_df[['post', 'is_depression']]
 
