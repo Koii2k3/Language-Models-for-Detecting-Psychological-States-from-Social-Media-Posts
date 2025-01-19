@@ -16,8 +16,8 @@ df = pd.read_csv(data_path)
 clean_df = df[['text', 'label']]
 
 clean_df['post'] = clean_df['text']
-clean_df['is_depression'] = df['label'].map({0: 'No', 1: 'Yes'})
+clean_df['is_stress'] = df['label'].map({0: 'No', 1: 'Yes'})
 
-final_df = clean_df[['post', 'is_depression']]
+final_df = clean_df[['post', 'is_stress']]
 
 final_df.to_csv(output_path, index=False)

@@ -33,8 +33,7 @@ data[gen_ex_model] = data[gen_ex_model].astype(object)
 
 for index, row in tqdm(data.iterrows(), total=data.shape[0]):
     if pd.isna(row[gen_ex_model]):
-        filled_prompt = generate_cot_example.gen_cot_prompt.format(
-            'Thwarted Belongingness', row['post'])
+        filled_prompt = generate_cot_example.gen_belong_cot_prompt.format(row['post'])
 
         response = client.chat.completions.create(
             model="gpt-4o-mini",

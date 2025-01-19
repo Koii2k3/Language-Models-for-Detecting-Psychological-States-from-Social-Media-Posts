@@ -26,12 +26,13 @@ def combine_csv_columns(file1_path, file2_path, column_to_extract):
         return None
 
 if __name__ == '__main__':
-    from_file1_path = os.path.join('evaluating', 'gemini_20', 'Dreaddit.csv')
-    to_file2_path = os.path.join('evaluating', 'gemini_15_8b', 'Dreaddit.csv')
-    column_to_extract = 'gemini_20'
+    dataset_name = "Irf_belong"
+    column_to_extract = 'gemini20flashexp'
+    from_file1_path = os.path.join('evaluating', f'zs_{column_to_extract}', f'{dataset_name}.csv')
+    to_file2_path = os.path.join('evaluating', 'zeroshot', f'{dataset_name}.csv')
 
     modified_df = combine_csv_columns(from_file1_path, to_file2_path, column_to_extract)
 
     if modified_df is not None:
-        output_path = os.path.join(os.path.dirname(to_file2_path), 'combined_file.csv')
+        output_path = os.path.join(os.path.dirname(to_file2_path), f'{dataset_name}.csv')
         modified_df.to_csv(output_path, index=False)
