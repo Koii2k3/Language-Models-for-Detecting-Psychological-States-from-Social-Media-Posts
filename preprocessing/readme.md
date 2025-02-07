@@ -20,4 +20,5 @@ To run a script, simply execute it using Python:
 python irf.py
 python sdcnl.py
 python dreaddit.py
+# ... and so on for each dataset.
 ```

@@ -15,7 +15,7 @@ This folder houses the cleaned and preprocessed datasets prepared for our resear
 
     The figure below illustrates the pipeline for generating CoT examples.
     <div align="center">
-      <img src="images/PipelineCoTExample.png" alt="pipeline CoT example" width="800"/>
+      <img src="../images/PipelineCoTExample.png" alt="pipeline CoT example" width="800"/>
     </div>
 
 ## 2. `raw`
