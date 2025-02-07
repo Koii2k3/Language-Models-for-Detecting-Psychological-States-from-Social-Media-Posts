@@ -18,35 +18,22 @@ Illustration of the prompt structure with five main components: (1) Context, (2)
 ## Installation
 Instructions for installing the necessary tools, libraries, and environment to run the code.
 
-### 1. Create a Conda Environment
-First, create a new Conda environment:
-
-```bash
-conda create -n myenv python=3.8
-conda activate myenv
-```
-
-### 2. Install Required Libraries
-Install the required libraries from the `requirements.txt` file:
-
-```bash
-pip install -r requirements.txt
-```
-
-If you have an `environment.yml` file, you can create the environment from it:
+Create the environment from an `environment.yml` file:
 
 ```bash
 conda env create -f environment.yml
-conda activate myenv
+conda activate DSD
 ```
 
-## Data
-See the `datasets` folder for the datasets used and `readme.md` for dataset sources.
-For CoT example, access the `datasets/clean/CoTExample` folder for more details. The figure below illustrates the pipeline for generating CoT examples.
+## Project Structure
 
-<div align="center">
-  <img src="images/PipelineCoTExample.png" alt="pipeline CoT example" width="800"/>
-</div>
+This repository is organized as follows:
+
+*   **`datasets/`**: Contains the datasets used in this study. See [datasets/readme.md](datasets/readme.md) for more details about the data, its sources, and usage.
+*   **`preprocesing/`**: Contains the scripts for preprocessing the data. See [preprocessing/readme.md](preprocessing/readme.md) for more details on the preprocessing steps.
+*   **`prompting/`**: Contains the scripts for generating prompts. See [prompting/readme.md](prompting/readme.md) for more details on the prompting strategies.
+*   **`finetune/`**: Contains the fine-tuned language models. See [finetune/readme.md](finetune/readme.md) for information on how to download and use the models.
+*   **`evaluating/`**: Contains the scripts for running experiments and evaluating models. See [evaluating/readme.md](evaluating/readme.md) for detailed instructions on how to use the scripts and reproduce the results.
 
 ## Results
 <div align="center">
